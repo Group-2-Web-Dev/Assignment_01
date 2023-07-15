@@ -1,0 +1,42 @@
+<!-- File name: app.css 
+Student’s Name: Hemal Vaghela
+StudentID: 301289095 
+Date: July 14, 2023 -->
+
+<!-- Main navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#"><img src="/Assets/images/logo.png" alt="logo" width="180" >  Incident Management App</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">        
+        <% if(title == "Home" || title == "/"){ %>
+          <li class="nav-item active">            
+            <% } else { %>
+            <li class="nav-item">
+            <% }  %>
+            <a class="nav-link" href="/"><i class="fa-solid fa-house"></i> Home </a>
+        </li>
+        
+        <% if(title == "Incidents"){ %>
+          <li class="nav-item active">
+            <% } else { %>
+            <li class="nav-item">
+            <% }  %>
+            <a class="nav-link" href="/incident-list"><i class="fa-solid fa-indent"></i> Incidents </a>  
+        </li> 
+
+        <% if (typeof displayName == 'string' && displayName) { %>
+          <li class="navbar-text"><i class="fas fa-lg fa-user"></i>Welcome, <%= displayName %></li>
+          <li class="nav-item"><a href="/logout" class="nav-link">
+            <i class="fas fa-lg fa-sign-out-alt"></i> Logout</a></li>
+          <% } else  { %>
+            <li class="nav-item"><a href="/login" class="nav-link">
+              <i class="fas fa-lg fa-sign-in-alt"></i> Login</a></li>
+        <% } %>
+      </ul>      
+    </div>
+  </nav>
+  

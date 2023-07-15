@@ -1,0 +1,138 @@
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/main_nav.ejs %>
+
+<!-- Content for the Add Page -->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%= title %></h1>
+            <form class="form" method="POST">
+                <div class="form-group row">
+                    <div class="col-md-6"> <label for="counterTextField">Counter</label></div>
+                    <div class="col-md-6"> <input type="text" class="form-control"
+                        id="counterTextField"
+                        placeholder="Enter the Incident Count"
+                        name="counter" 
+                        value="<%= incident.counter %>"
+                        required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-6">
+                        <label for="incidentNumberTextField">Incident Number</label>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control"
+                        id="incidentNumberTextField"
+                        placeholder="Enter the Incident Number"
+                        name="incidentNumber" 
+                        value="<%= incident.incidentNumber %>"
+                        required>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-md-6">
+                        <label for="descriptionTextField">Incident Description</label>
+                    </div>
+                    <div class="col-md-6">
+                        <textarea type="text" class="form-control"
+                        id="descriptionTextField"
+                        placeholder="Enter description"
+                        name="description" required><%= incident.description %></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-md-6">
+                        <label for="priorityTextField">Incident Priority</label>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control"
+                        id="priorityTextField"
+                        placeholder="Enter the priority"
+                        name="priority" 
+                        value="<%= incident.priority %>"
+                        required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-6">
+                        <label for="customerNameTextField">Customer Name</label>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control"
+                        id="customerNameTextField"
+                        placeholder="Enter the Customer Name"
+                        name="customerName" 
+                        value="<%= incident.customerName %>"
+                        required>
+                    </div>
+                </div> 
+                <div class="form-group row">
+                    <div class="col-md-6">
+                        <label for="statusTextField">Status</label>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control"
+                        id="statusTextField"
+                        placeholder="Enter the Customer Name"
+                        name="status" 
+                        value="<%= incident.status %>"
+                        required>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-md-6">
+                        <label for="lastUpdateTimeTextField">Last Update Time</label>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control"
+                        id="lastUpdateTimeTextField"
+                        placeholder="Enter the last Update Time"
+                        name="lastUpdateTime" 
+                        value="<%= incident.lastUpdateTime %>"
+                        required>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-md-6">
+                        <label for="durationTextField">Duration</label>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control"
+                        id="durationTextField"
+                        placeholder="Enter duration"
+                        name="duration" 
+                        value="<%= incident.duration %>"
+                        required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-6">
+                        <label for="resolutionTimeTextField">Resolution</label>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control"
+                        id="resolutionTextField"
+                        placeholder="Enter resolution"
+                        name="resolution" 
+                        value="<%= incident.resolution %>"
+                        required>
+                    </div>
+                </div>                
+                <br>
+                <button class="btn btn-primary" type="submit"><i class="fas fa-edit"></i>Submit</button>
+                <a href="/incident-list" class="btn btn-warning"> <i class="fas fa-undo"></i> Cancel</a>
+            </form>
+        </div>
+        </div>
+    </div>
+</div>
+
+<%- include ../partials/bottom_nav.ejs %>  
+
+<%- include ../partials/footer.ejs %>
