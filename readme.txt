@@ -89,6 +89,8 @@ go back to client folder and install json server with following command:
 npm install json-server --save-dev
 npm install jsonwebtoken --save-dev
 
+start json server with following command: npm run json
+
 Added data in the data.js file
 write auth code in to the authMiddleware.js
 
