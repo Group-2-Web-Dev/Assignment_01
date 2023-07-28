@@ -41,6 +41,45 @@ Week 8: Video 1 end
 We have installed angular and created folder structure under client folder for the bookstore example
 
 
-
 >>>>>>>
+Week 8: Video 2 start
+Under the app folder go to app.component.html and remove everything except <router-outlet></router-outlet>
+
+go to client folder and run following command to generate components: 
+ng generate component partials/Header
+ng generate component partials/Footer
+
+Add header and footer in the app.component.html
+Change the code for header and footer components
+
+Next we are going to create a Home component under pages folder
+So go back to client folder and run following command: 
+ng generate component pages/Home
+ng generate component pages/About
+ng generate component pages/Contact
+ng g c pages/Products
+ng g c pages/Services
+
+in the app-routing.module.ts add item to the array.
+
+const routes: Routes = [
+{path: 'home', component: HomeComponent},
+{path: 'about', component: AboutComponent},
+{path: 'products', component: ProductsComponent},
+{path: 'services', component: ServicesComponent},
+{path: 'contact', component: ContactComponent},
+{path: '', redirectTo:'/home', pathMatch:'full'},
+];
+
+
+Summary:
+We have added components for each page and have set its path in the app-routing.module.ts file.
+
+Week 8: Video 2 end
+>>>>>
+
+
+
+
+
 
