@@ -78,7 +78,24 @@ We have added components for each page and have set its path in the app-routing.
 Week 8: Video 2 end
 >>>>>
 
+>>>>>
 
+Week 8: Video 3 Start
+We need to create a new base page So go back to client folder and run following command: 
+ng g c partials/BasePage
+
+Added basepage selector to all the pages
+go back to client folder and install json server with following command: 
+npm install json-server --save-dev
+npm install jsonwebtoken --save-dev
+
+Added data in the data.js file
+write auth code in to the authMiddleware.js
+
+Week 8: Video 3 end
+>>>>>>
+
+>>>>>>
 
 
 
