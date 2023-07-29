@@ -117,8 +117,18 @@ Code added for pagination.
 Counter directive created
 common modues for pages and partial collected in its own file for clean up
 
-Week 8: Video 6 start
+Week 8: Video 6 end
 >>>>>>
+
+>>>>>>
+Week 8: Video 7 start
+We need to add card related items/files here.
+go to client folder and execute following command: ng g c book-store/CartSummary
+cart code added
+Week 8: Video 7 end
+
+
+
 
 
 

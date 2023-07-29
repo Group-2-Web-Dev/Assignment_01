@@ -7,7 +7,7 @@ import { CounterDirective } from './counter.directive';
 
 @NgModule({
   imports: [ModelModule, BrowserModule, FormsModule],
-  declarations: [BookStoreComponent,CounterDirective],
+  declarations: [BookStoreComponent, CounterDirective],
   exports: [BookStoreComponent, CounterDirective]
 })
 export class BookStoreModule {}

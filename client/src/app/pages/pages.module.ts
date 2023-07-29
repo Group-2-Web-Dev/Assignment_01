@@ -27,3 +27,4 @@ import { PartialsModule } from '../partials/partials.module';
     PartialsModule]
 })
 export class PagesModule {}
+
