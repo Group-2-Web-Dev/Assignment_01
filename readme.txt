@@ -98,6 +98,20 @@ Week 8: Video 3 end
 >>>>>>
 
 >>>>>>
+Week 8: Video 4 start
+Added model folders and files to create model.
+Week 8: Video 4 end
+>>>>>>
+
+>>>>>>
+Week 8: Video 5 start
+
+go to client/src/app folder and run following command: ng g c BookStore
+
+
+
+
+
 
 
 
