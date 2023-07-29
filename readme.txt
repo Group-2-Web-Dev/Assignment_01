@@ -105,8 +105,22 @@ Week 8: Video 4 end
 
 >>>>>>
 Week 8: Video 5 start
-
 go to client/src/app folder and run following command: ng g c BookStore
+
+Created bookstore module and related files
+Week 8: Video 5 end
+>>>>>>
+
+>>>>>>
+Week 8: Video 6 start
+Code added for pagination. 
+Counter directive created
+common modues for pages and partial collected in its own file for clean up
+
+Week 8: Video 6 start
+>>>>>>
+
+
 
 
 
