@@ -138,7 +138,11 @@ and then the next command is: ng g c book-store/Checkout
 Summary: In this video, we have added two more components, CartDetail and Checkout. We have applied respective routing changes.
 
 Video 1 end
-
+>>>>>>>>>>>>>>>>>>>>>>>>>
+Video 2 end
+Fix routing problem for the cart.
+Fix calculation problem by correcting the id in the json data
+>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
 

@@ -60,8 +60,10 @@ export class Cart
 export class CartLine
 {
   constructor(public book: Book,
-              public quantity: number)
-  {
+              public quantity: number)  {}
 
+  get lineTotal(): number
+  {
+    return this.quantity * this.book.price;
   }
 }

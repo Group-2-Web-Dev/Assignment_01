@@ -2,7 +2,7 @@ module.exports = function () {
   return {
     "book-list": [
       {
-        id: 1,
+        _id: 1,
         name: "Dune",
         author: "Frank Herbert",
         published: "1965",
@@ -11,7 +11,7 @@ module.exports = function () {
         price: 10.95,
       },
       {
-        id: 2,
+        _id: 2,
         name: "Blood Music",
         author: "Greg Bear",
         published: "1985",
@@ -20,7 +20,7 @@ module.exports = function () {
         price: 19.95,
       },
       {
-        id: 3,
+        _id: 3,
         name: "Ring World",
         author: "Larry Niven",
         published: "1970",
@@ -30,7 +30,7 @@ module.exports = function () {
         __v: 0,
       },
       {
-        id: 4,
+        _id: 4,
         name: "I, Robot",
         author: "Isaac Asimov",
         published: "1950",
@@ -38,16 +38,6 @@ module.exports = function () {
           "I, Robot is a fixup novel of science fiction short stories or essays by American writer Isaac Asimov.\r\n                    \r\n                    ",
         price: 14.96,
       },
-      {
-        id: 5,
-        name: "I, Robot",
-        author: "Isaac Asimov",
-        published: "1950",
-        description:
-          "I, Robot is a fixup novel of science fiction short stories or essays by American writer Isaac Asimov.\r\n                    \r\n                    ",
-        price: 14.96,
-      },
-      
     ],
     orders: []
   }
