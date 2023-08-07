@@ -127,6 +127,19 @@ go to client folder and execute following command: ng g c book-store/CartSummary
 cart code added
 Week 8: Video 7 end
 
+>>>>>>>>>>>>>>>>>>>>>>>>>
+Week 9 Started
+Video 1 start
+
+We are going to create two new components. CartDetail and Checkout
+Go to client folder and then to the src\app folder and execute following command: ng g c book-store/CartDetail
+and then the next command is: ng g c book-store/Checkout 
+
+Summary: In this video, we have added two more components, CartDetail and Checkout. We have applied respective routing changes.
+
+Video 1 end
+
+
 
 
 

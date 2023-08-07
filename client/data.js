@@ -38,6 +38,16 @@ module.exports = function () {
           "I, Robot is a fixup novel of science fiction short stories or essays by American writer Isaac Asimov.\r\n                    \r\n                    ",
         price: 14.96,
       },
+      {
+        id: 5,
+        name: "I, Robot",
+        author: "Isaac Asimov",
+        published: "1950",
+        description:
+          "I, Robot is a fixup novel of science fiction short stories or essays by American writer Isaac Asimov.\r\n                    \r\n                    ",
+        price: 14.96,
+      },
+      
     ],
     orders: []
   }
