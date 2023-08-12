@@ -2,7 +2,7 @@ let mongoose = require('mongoose');
 
 //create a model class
 let incidentModel = mongoose.Schema({
-    counter: Number,
+    counter: String,
     incidentNumber: String,
     description: String,
     priority: String,

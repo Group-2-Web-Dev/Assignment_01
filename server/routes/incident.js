@@ -23,6 +23,8 @@ function requireAuth(req, res, next)
 // Get Route for the Incident List page - READ Operation
 router.get('/', incidentController.displayIncidentList);
 
+
+
 // Get Route for displaying the Add page - CREATE Operation
 router.get('/add', requireAuth, incidentController.displayAddPage);
 

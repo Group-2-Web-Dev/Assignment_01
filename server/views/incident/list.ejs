@@ -6,12 +6,34 @@ Date: Juky 14, 2023 -->
 <%- include ../partials/header.ejs %>
 <%- include ../partials/main_nav.ejs %>
 <main >
+    <p></p>
+    <div class="row offset-md-1">
+        <div class="col-sm-4">
+            <h2>&nbsp;</h1>
+            <h2>Total Incidents: <%= IncidentList.length %></h2>
+            <h2 id="closed"></h2>
+            <h2 id="open"></h2>
+        </div>
+        <div class="col-sm-3">
+            <div id="ChStatus" style="width:100%; max-width:400px; height:300px;"></div>
+        </div>
+        <div class="col-sm-3">
+            <div id="ChPriority" style="width:100%; max-width:400px; height:300px;"></div>
+        </div>
+        
+    </div>
     <div class="row">
         <div class="offset-md-1 col-md-10">
             <h1><%= title %></h1>
             <% if (typeof displayName == 'string' && displayName) { %>
                 <a href="/incident-list/add" class="btn btn-primary" role="button">
                     <i class="fas fa-plus-circle"></i> Add Incident</a>
+                     
+                    <script>
+                        // stringify the data passed from router to ejs (within the EJS template only)
+                        var parsed_val = <%- JSON.stringify(IncidentList) %>                          
+                    </script>
+
             <% } %>
             <br>            
             <table class="table table-bordered table-striped table-hover">
@@ -75,6 +97,7 @@ Date: Juky 14, 2023 -->
             
         </div>
     </div>
+    <p>&nbsp;</p>  <p>&nbsp;</p>  <p>&nbsp;</p>
   </main>
 <%- include ../partials/footer.ejs %>
 <%- include ../partials/bottom_nav.ejs %>

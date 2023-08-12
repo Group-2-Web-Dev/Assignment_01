@@ -17,7 +17,7 @@ under the client folder go to angular.json file Under build->Option->style add f
 
 under the client folder go to angular.json file Under build->Option->scripts add following lines:
 "./node_modules/jquery/dist/jquery.min.js",
-"./node_modules/bootstrap/dist/js/bootstrap.min.js",
+"./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
 "src/Scripts/app.js"
 
 Under src folder create a file called app.js and create a IIFE function

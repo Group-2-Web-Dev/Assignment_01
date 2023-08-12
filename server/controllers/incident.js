@@ -5,13 +5,11 @@ let mongoose = require('mongoose');
 // create a reference to the model
 let Incident = require('../models/incident');
 
+
 module.exports.displayIncidentList = async (req, res, next) => {
     try {
-        let incidentList = await Incident.find();
-        console.log('incidentList inside controller');
+        let incidentList = await Incident.find();       
 
-        console.log(incidentList);
-        
         res.render('incident/list', {
             title: 'Incident List', 
             IncidentList: incidentList,
@@ -34,15 +32,19 @@ module.exports.displayAddPage = async (req, res, next) =>{
 
 
 module.exports.processAddPage = async (req, res, next) =>{
+    
+    let d = new Date();
+    let datestring = d.getDate()  +''+ (d.getMonth()+1) +''+ d.getFullYear() +'-'+ d.getHours() +''+ d.getMinutes();
+ 
     let newIncident = new Incident({
-        "counter": req.body.counter,
-        "incidentNumber": req.body.incidentNumber,
+        "counter": datestring,   // was req.body.counter
+        "incidentNumber": datestring, // req.body.incidentNumber
         "description": req.body.description,
         "priority": req.body.priority,
         "customerName": req.body.customerName,
         "status":req.body.status,
-        "lastUpdateTime": req.body.lastUpdateTime,
-        "duration":req.body.duration,
+        "lastUpdateTime": new Date().toLocaleString(),
+        "duration":req.body.duration, // req.body.duration
         "resolution":req.body.resolution
     });
 
@@ -72,7 +74,7 @@ module.exports.displayEditPage = async (req, res, next) =>{
 
 module.exports.processEditPage = async (req, res, next) =>{
     let id = req.params.id;
-    console.log('this is ' + id);
+    console.log('this is id for edit' + id);
 
 
     let updatedIncident = {
@@ -82,12 +84,12 @@ module.exports.processEditPage = async (req, res, next) =>{
         "priority": req.body.priority,
         "customerName": req.body.customerName,
         "status":req.body.status,
-        "lastUpdateTime": req.body.lastUpdateTime,
+        "lastUpdateTime": new Date().toLocaleString(),
         "duration":req.body.duration,
         "resolution":req.body.resolution
     };
 
-    
+    console.log(updatedIncident);
 
     try {
         await Incident.updateOne({_id: id}, updatedIncident);
@@ -110,3 +112,10 @@ module.exports.performDelete = async (req, res, next) =>{
         res.status(500).send(err);
     }
 };
+
+// function getCounter(){
+//     var d = new Date();
+//     var datestring = d.getDate()  + (d.getMonth()+1) +d.getFullYear() + d.getHours() + d.getMinutes();
+//     return datestring;
+
+// }
